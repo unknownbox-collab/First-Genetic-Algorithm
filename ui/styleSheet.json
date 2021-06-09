@@ -1,0 +1,68 @@
+{
+    "main":{
+        "title" : [
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-width : 2px;",
+            "border-radius : 20%;"
+        ],
+        
+        "displayMenu" : [
+            "border-style : solid;",
+            "border-width : 2px;",
+            "border-color : #000000"
+        ],
+
+        "load" : [
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ],
+
+        "makeNew" : [
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ]
+    },
+    "option_1":{
+        "ok":[
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ]
+    },
+    "option_21":{
+        "ok":[
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ]
+    },
+    "option_22":{
+        "ok":[
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ]
+    },
+    "simulation":{
+        "ok":[
+            "border-style : solid;",
+            "background-color : #FFFFFF;",
+            "border-color : #000000;",
+            "border-width : 2px;",
+            "border-radius : 10%;"
+        ] 
+    }
+}
