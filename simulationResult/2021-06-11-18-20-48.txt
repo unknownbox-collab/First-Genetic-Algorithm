@@ -1,0 +1,108 @@
+/////GENERATION 0/////
+fitness : [1, 1, 1, 1, 3]
+sum of fitness : 7
+mean of fitness : 1.4
+best fitness : 3
+best gene : [451, 612, 283, 609]
+/////GENERATION 1/////
+fitness : [3, 1, 2, 1, 32]
+sum of fitness : 39
+mean of fitness : 7.8
+best fitness : 32
+best gene : [451, 612, 18, 315]
+/////GENERATION 2/////
+fitness : [32, 3, 1, 3, 32]
+sum of fitness : 71
+mean of fitness : 14.2
+best fitness : 32
+best gene : [451, 612, 18, 315]
+/////GENERATION 3/////
+fitness : [32, 32, 32, 32, 26]
+sum of fitness : 154
+mean of fitness : 30.8
+best fitness : 32
+best gene : [451, 612, 18, 315]
+/////GENERATION 4/////
+fitness : [32, 32, 33, 35, 17]
+sum of fitness : 149
+mean of fitness : 29.8
+best fitness : 35
+best gene : [451, 612, 18, 369]
+/////GENERATION 5/////
+fitness : [35, 33, 35, 35, 35]
+sum of fitness : 173
+mean of fitness : 34.6
+best fitness : 35
+best gene : [451, 612, 18, 369]
+/////GENERATION 6/////
+fitness : [35, 35, 51, 2, 40]
+sum of fitness : 163
+mean of fitness : 32.6
+best fitness : 51
+best gene : [451, 666, 18, 945]
+/////GENERATION 7/////
+fitness : [41, 40, 11, 3, 3]
+sum of fitness : 98
+mean of fitness : 19.6
+best fitness : 41
+best gene : [451, 666, 18, 945]
+/////GENERATION 8/////
+fitness : [51, 47, 1, 2, 41]
+sum of fitness : 142
+mean of fitness : 28.4
+best fitness : 51
+best gene : [451, 666, 18, 945]
+/////GENERATION 9/////
+fitness : [41, 47, 51, 95, 32]
+sum of fitness : 266
+mean of fitness : 53.2
+best fitness : 95
+best gene : [834, 420, 18, 684]
+/////GENERATION 10/////
+fitness : [95, 51, 41, 95, 2]
+sum of fitness : 284
+mean of fitness : 56.8
+best fitness : 95
+best gene : [834, 420, 18, 684]
+/////GENERATION 11/////
+fitness : [95, 80, 1, 36, 26]
+sum of fitness : 238
+mean of fitness : 47.6
+best fitness : 95
+best gene : [834, 420, 18, 684]
+/////GENERATION 12/////
+fitness : [95, 95, 33, 95, 1]
+sum of fitness : 319
+mean of fitness : 63.8
+best fitness : 95
+best gene : [834, 420, 18, 684]
+/////GENERATION 13/////
+fitness : [95, 95, 80, 63, 95]
+sum of fitness : 428
+mean of fitness : 85.6
+best fitness : 95
+best gene : [834, 420, 18, 684]
+/////GENERATION 14/////
+fitness : [95, 80, 96, 95, 95]
+sum of fitness : 461
+mean of fitness : 92.2
+best fitness : 96
+best gene : [834, 420, 18, 694]
+/////GENERATION 15/////
+fitness : [96, 95, 1, 69, 27]
+sum of fitness : 288
+mean of fitness : 57.6
+best fitness : 96
+best gene : [834, 420, 18, 694]
+/////GENERATION 16/////
+fitness : [96, 95, 95, 3, 95]
+sum of fitness : 384
+mean of fitness : 76.8
+best fitness : 96
+best gene : [834, 420, 18, 694]
+/////GENERATION 17/////
+fitness : [81, 95, 4, 96, 96]
+sum of fitness : 372
+mean of fitness : 74.4
+best fitness : 96
+best gene : [834, 420, 18, 694]

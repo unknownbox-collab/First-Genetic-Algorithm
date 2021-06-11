@@ -1,0 +1,36 @@
+/////GENERATION 0/////
+fitness : [1, 3, 4, 1, 1]
+sum of fitness : 10
+mean of fitness : 2.0
+best fitness : 4
+best gene : [392, 381, 147, 956]
+/////GENERATION 1/////
+fitness : [4, 3, 1, 1, 3]
+sum of fitness : 12
+mean of fitness : 2.4
+best fitness : 4
+best gene : [392, 381, 147, 956]
+/////GENERATION 2/////
+fitness : [4, 3, 4, 3, 1]
+sum of fitness : 15
+mean of fitness : 3.0
+best fitness : 4
+best gene : [392, 381, 147, 956]
+/////GENERATION 3/////
+fitness : [4, 4, 3, 3, 2]
+sum of fitness : 16
+mean of fitness : 3.2
+best fitness : 4
+best gene : [392, 381, 147, 956]
+/////GENERATION 4/////
+fitness : [4, 4, 4, 4, 53]
+sum of fitness : 69
+mean of fitness : 13.8
+best fitness : 53
+best gene : [392, 381, 0, 956]
+/////GENERATION 5/////
+fitness : [288, 4, 1000, 1, 1]
+sum of fitness : 1294
+mean of fitness : 258.8
+best fitness : 1000
+best gene : [884, 381, 0, 956]

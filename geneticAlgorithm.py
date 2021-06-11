@@ -4,7 +4,7 @@ from numpy.core.numeric import cross
 from numpy.random import rand
 import graphic
 GENE_SET = list(range(1000))
-OBJECT_NUM = 4
+OBJECT_NUM = 5
 GENE_NUM = 4
 BEST_NUM = 2
 class Chromosome():
@@ -29,7 +29,7 @@ def getVariance(x) : return sum([(i-sum(x)/len(x))**2 for i in x])
 def getStandardDeviation(x) : return math.sqrt(sum([(i-sum(x)/len(x))**2 for i in x])/(len(x)-1))
 def mutation(objects, best, percent = 20):return best+[Chromosome([random.choice(GENE_SET) if random.randint(0,100)<=percent else objects[i].gene[j] for j in range(GENE_NUM)],objects[i].fitness) for i in range(OBJECT_NUM)][BEST_NUM:]
 def simulation(objects):
-    return [graphic.get_fitness(objects[i].gene,mod = print(f"{i+1}번째 객체 시뮬레이션 완료")) for i in range(len(objects))]
+    return [graphic.get_fitness(objects[i].gene,mod = print(f"{i+1}번째 객체 시뮬레이션 시작..")) for i in range(len(objects))]
 def printGene(objects):print('\n'.join([str(i.gene) for i in objects]))
 def oneCycle(objects,generation,printer = 0,IsFile = None,writer = ""):
     print(f'/////GENERATION {generation}/////')
@@ -84,4 +84,4 @@ def getData(IsFile = False,generation = 100):
     for i in range(generation):grand = oneCycle(grand,i,printer=1,IsFile = file)
     if file is not None:file.close()
 if __name__ == "__main__":
-    getData(IsFile = True, generation = 15)
+    getData(IsFile = True, generation = 100)

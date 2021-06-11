@@ -1,6 +1,7 @@
 from geneticAlgorithm import *
 import re,os,time
 FOOD_PER_GENERATION = 2
+BARRENNESS = 30
 def printWithSave(contents="",save = []):
     if contents == "__save__":
         formattedDate = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
@@ -165,7 +166,6 @@ class Map():
         random.seed(self.seed+1)
         y = random.choice(list(range(self.size[1])))
         while self.contents[y][x] == "P" or self.contents[y][x] == "F":
-            print(self.seed)
             random.seed(self.seed)
             x = random.choice(list(range(self.size[0])))
             random.seed(self.seed+1)
@@ -211,7 +211,7 @@ def get_fitness(chromosome,mod = False):
             player1.move()
             my_map.moveFoods()
             my_map.printMap()
-            if i % 30 == 0:
+            if i % 35 == 0:
                 player1.map.makeOneFood()
             if mod : printWithSave()
             time.sleep(0.1)
@@ -232,7 +232,7 @@ def viewer(chromosome):
             my_map.moveFoods()
             converter = {"0" : "🟦", "P" : "🐙", "F" : "🟡"}
             view[last].append('\n'.join([''.join([converter[j] for j in i]) for i in my_map.contents]))
-            if i % 20 == 0:
+            if i % BARRENNESS == 0:
                 player1.map.makeOneFood()
             view[last].append("")
             time.sleep(0.1)
@@ -244,5 +244,5 @@ def viewer(chromosome):
         view[last] = '\n'.join(view[last])
     return view
 if __name__ == "__main__":
-    get_fitness([624, 881, 4, 882],mod=True)
+    get_fitness([884, 381, 0, 956],mod=True)
     printWithSave("__save__")
