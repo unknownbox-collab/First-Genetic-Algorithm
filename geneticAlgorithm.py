@@ -2,9 +2,10 @@ import numpy as np
 import math,random,datetime
 from numpy.core.numeric import cross
 from numpy.random import rand
-GENE_SET = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-OBJECT_NUM = 3
-GENE_NUM = 10
+import graphic
+GENE_SET = list(range(1000))
+OBJECT_NUM = 4
+GENE_NUM = 4
 BEST_NUM = 2
 class Chromosome():
     def __init__(self,gene,fitness) -> None:
@@ -14,7 +15,7 @@ class Chromosome():
         return str(self.__dict__)
     def copy(self):
         return Chromosome(self.gene.copy(),int(self.fitness))
-def makeParents(size) : return [Chromosome(random.sample(GENE_SET[0:10], GENE_NUM),0) for i in range(size)]
+def makeParents(size) : return [Chromosome(random.sample(GENE_SET, GENE_NUM),0) for i in range(size)]
 def selection(parents) :return [parents.pop([i.fitness for i in parents].index(j)) for j in sorted([i.fitness for i in parents],reverse=True)][:BEST_NUM] 
 def crossover(parents,slice = (2,5)):
     result = []
@@ -27,7 +28,8 @@ def crossover(parents,slice = (2,5)):
 def getVariance(x) : return sum([(i-sum(x)/len(x))**2 for i in x])
 def getStandardDeviation(x) : return math.sqrt(sum([(i-sum(x)/len(x))**2 for i in x])/(len(x)-1))
 def mutation(objects, best, percent = 20):return best+[Chromosome([random.choice(GENE_SET) if random.randint(0,100)<=percent else objects[i].gene[j] for j in range(GENE_NUM)],objects[i].fitness) for i in range(OBJECT_NUM)][BEST_NUM:]
-def simulation(objects):return [sum(objects[i].gene) for i in range(len(objects))]
+def simulation(objects):
+    return [graphic.get_fitness(objects[i].gene,mod = print(f"{i+1}번째 객체 시뮬레이션 완료")) for i in range(len(objects))]
 def printGene(objects):print('\n'.join([str(i.gene) for i in objects]))
 def oneCycle(objects,generation,printer = 0,IsFile = None,writer = ""):
     print(f'/////GENERATION {generation}/////')
@@ -38,7 +40,8 @@ def oneCycle(objects,generation,printer = 0,IsFile = None,writer = ""):
         if IsFile is not None:
             writer += f'==Objects==\n'
             writer += '\n'.join([str(i.gene) for i in objects])+"\n"
-    for i in range(OBJECT_NUM):objects[i].fitness = simulation(objects)[i]
+    simulationResult = simulation(objects)
+    for i in range(OBJECT_NUM):objects[i].fitness = simulationResult[i]
     if printer == 1 :
         print("fitness :",[objects[i].fitness for i in range(OBJECT_NUM)])
         print("sum of fitness :",sum([objects[i].fitness for i in range(OBJECT_NUM)]))
@@ -55,7 +58,7 @@ def oneCycle(objects,generation,printer = 0,IsFile = None,writer = ""):
         print("==Selection==")
         if IsFile is not None : writer += "==Selection==\n"
     objects = selection(objects)
-    bestChromosome = objects
+    bestChromosome = objects.copy()
     if printer == 0 :
         printGene(objects)
         print("==CrossOver==")
@@ -68,7 +71,7 @@ def oneCycle(objects,generation,printer = 0,IsFile = None,writer = ""):
         print("==Mutation==")
         if IsFile is not None : writer += '\n'.join([str(i.gene) for i in objects])+"\n"
         if IsFile is not None : writer += "==Mutation==\n"
-    objects = mutation(objects,bestChromosome,3)
+    objects = mutation(objects,bestChromosome,30)
     if printer == 0 :
         printGene(objects)
         if IsFile is not None : writer += '\n'.join([str(i.gene) for i in objects])+"\n"
@@ -80,4 +83,5 @@ def getData(IsFile = False,generation = 100):
     grand = makeParents(OBJECT_NUM)
     for i in range(generation):grand = oneCycle(grand,i,printer=1,IsFile = file)
     if file is not None:file.close()
-getData(IsFile = True, generation = 500)
+if __name__ == "__main__":
+    getData(IsFile = True, generation = 15)

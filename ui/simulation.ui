@@ -19,16 +19,23 @@
   <property name="sizeGripEnabled">
    <bool>false</bool>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <widget class="QLabel" name="display">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>651</width>
+     <width>661</width>
      <height>611</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="CentralWidget"/>
+   <property name="font">
+    <font>
+     <family>Consolas</family>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -66,7 +66,7 @@
      </font>
     </property>
     <property name="text">
-     <string>속도</string>
+     <string>체력</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_2">
@@ -86,7 +86,7 @@
      </font>
     </property>
     <property name="text">
-     <string>크기</string>
+     <string>감각</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_3">
@@ -106,7 +106,7 @@
      </font>
     </property>
     <property name="text">
-     <string>감각</string>
+     <string>속도</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_4">
@@ -126,7 +126,7 @@
      </font>
     </property>
     <property name="text">
-     <string>주머니</string>
+     <string>포만감</string>
     </property>
    </widget>
   </widget>
