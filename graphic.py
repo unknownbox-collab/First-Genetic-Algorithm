@@ -244,5 +244,5 @@ def viewer(chromosome):
         view[last] = '\n'.join(view[last])
     return view
 if __name__ == "__main__":
-    get_fitness([900, 827, 9, 659],mod=True)
+    get_fitness([624, 881, 4, 882],mod=True)
     printWithSave("__save__")
